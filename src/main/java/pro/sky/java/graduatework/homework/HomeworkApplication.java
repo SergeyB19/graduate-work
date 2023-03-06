@@ -1,13 +1,13 @@
-package pro.sky.java.graduatework;
+package pro.sky.java.graduatework.homework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GraduateWorkApplication {
+public class HomeworkApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GraduateWorkApplication.class, args);
+        SpringApplication.run(HomeworkApplication.class, args);
     }
 
 }
