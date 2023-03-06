@@ -1,5 +1,4 @@
 package pro.sky.java.graduatework.homework.controller;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -13,7 +12,6 @@ import pro.sky.java.graduatework.homework.dto.RegisterReq;
 import pro.sky.java.graduatework.homework.dto.Role;
 import pro.sky.java.graduatework.homework.service.AuthService;
 import static pro.sky.java.graduatework.homework.dto.Role.USER;
-
 
 @Slf4j
 @CrossOrigin(value = "http://localhost:3000")

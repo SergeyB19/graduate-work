@@ -1,5 +1,4 @@
 package pro.sky.java.graduatework.homework.service.impl;
-
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
