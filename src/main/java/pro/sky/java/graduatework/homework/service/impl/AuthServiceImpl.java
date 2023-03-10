@@ -7,16 +7,23 @@ import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.stereotype.Service;
 import pro.sky.java.graduatework.homework.dto.RegisterReq;
 import pro.sky.java.graduatework.homework.dto.Role;
+import pro.sky.java.graduatework.homework.model.Model;
+import pro.sky.java.graduatework.homework.repositories.Repository;
 import pro.sky.java.graduatework.homework.service.AuthService;
+
+import java.util.Collection;
 
 @Service
 public class AuthServiceImpl implements AuthService {
+
+    private final Repository repository;
 
     private final UserDetailsManager manager;
 
     private final PasswordEncoder encoder;
 
-    public AuthServiceImpl(UserDetailsManager manager) {
+    public AuthServiceImpl(Repository repository, UserDetailsManager manager) {
+        this.repository = repository;
         this.manager = manager;
         this.encoder = new BCryptPasswordEncoder();
     }
@@ -45,5 +52,17 @@ public class AuthServiceImpl implements AuthService {
                         .build()
         );
         return true;
+    }
+
+    public Model findByUsername(String Username) {
+        return repository.findByUsername(Username);
+    }
+
+    public Collection<Model> findAllByUsername(String Username) {
+        return repository.findAllByUsername(Username);
+    }
+
+    public Collection<Model> findAllByUserNameContains(String part) {
+        return repository.findAllByUsernameContains(part);
     }
 }
